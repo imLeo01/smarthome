@@ -49,20 +49,21 @@ button_images_control_panel = {
         ...
     }
 }
+
 When a song is selected:
 
 Music plays using pygame
 
 Background and control button images are updated to match the selected theme
 
-🔐 Security Features
+## 🔐 Security Features
 Password login system
 
 Sends email alert after multiple failed login attempts
 
 Plays video or shows image based on login success/failure
 
-🔌 Arduino Communication
+## 🔌 Arduino Communication
 Uses serial module to send/receive commands to Arduino
 
 Examples:
@@ -73,15 +74,15 @@ s1.write(b"g"): Close garage door
 
 s1.write(b"n"): Request temperature reading from Arduino
 
-🌡️ Real-Time Temperature Update
+## 🌡️ Real-Time Temperature Update
 Uses Tkinter.after() to periodically request and display temperature data from Arduino
 
 Temperature is shown on the GUI via a Label
 
-🔙 Return to Main Menu
+## 🔙 Return to Main Menu
 "Back" button destroys the current frame and loads the main Host.py interface
 
-📁 Recommended Project Structure
+## 📁 Recommended Project Structure
 SmartHome/
 ├── images/
 │   ├── sim.jpg
@@ -96,7 +97,7 @@ SmartHome/
 ├── garage.py
 ├── README.md
 └── requirements.txt
-▶️ How to Run
+## ▶️ How to Run
 Install required packages:
 
 bash
@@ -105,7 +106,8 @@ Run the main program:
 
 bash
 python Host.py
-💡 Future Ideas
+
+##💡 Future Ideas
 Add RGB light control interface
 
 Add remote control support via web or mobile app
