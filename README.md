@@ -50,3 +50,71 @@ button_images_control_panel = {
         ...
     }
 }
+
+## 🔐 **Security Features**
+
+- **Password login system**
+- **Email alerts** sent after multiple failed login attempts
+- Plays **video** or shows **image** based on login **success/failure**
+
+---
+
+## 🔌 **Arduino Communication**
+
+Uses **serial module** (`pyserial`) to send and receive commands between Python and Arduino.
+
+### 📡 **Example Commands**
+
+- `s1.write(b"e")` → Open garage door  
+- `s1.write(b"g")` → Close garage door  
+- `s1.write(b"n")` → Request temperature reading from Arduino
+
+---
+
+## 🌡️ **Real-Time Temperature Update**
+
+- Uses `Tkinter.after()` to periodically request temperature from Arduino  
+- Temperature is displayed in the **GUI** using a `Label`
+
+---
+
+## 🔙 **Return to Main Menu**
+
+- A **"Back" button** destroys the current frame and reloads the main interface (`Host.py`)
+
+---
+
+## 📁 **Recommended Project Structure**
+SmartHome/
+├── images/
+│ ├── sim.jpg
+│ ├── new_sim.jpg
+│ ├── door.jpg
+│ └── ...
+├── music/
+│ ├── opn.mp3
+│ └── ...
+├── Host.py
+├── control_panel.py
+├── garage.py
+├── README.md
+└── requirements.txt
+
+## ▶️ **How to Run**
+
+### 1. **Install dependencies**:
+
+```bash
+pip install pillow pygame pyserial
+
+### 2. Run the main program:
+bash
+python Host.py
+
+💡 Future Ideas
+Add RGB light control interface
+
+Add remote control support via web or mobile app
+
+Log user access and control history
+
