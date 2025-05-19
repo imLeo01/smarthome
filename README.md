@@ -50,7 +50,7 @@ button_images_control_panel = {
         ...
     }
 }
-
+```
 ## 🔐 **Security Features**
 
 - **Password login system**
@@ -106,12 +106,12 @@ SmartHome/
 
 ```bash
 pip install pillow pygame pyserial
-
+```
 ### 2. Run the main program:
-bash
+```bash
 python Host.py
-
-💡 Future Ideas
+```
+## 💡 **Future Ideas**
 Add RGB light control interface
 
 Add remote control support via web or mobile app
