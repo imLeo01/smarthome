@@ -100,6 +100,8 @@ SmartHome/
 ├── README.md
 └── requirements.txt
 
+---
+
 ## ▶️ **How to Run**
 
 ### 1. **Install dependencies**:
@@ -111,6 +113,8 @@ pip install pillow pygame pyserial
 ```bash
 python Host.py
 ```
+---
+
 ## 💡 **Future Ideas**
 Add RGB light control interface
 
