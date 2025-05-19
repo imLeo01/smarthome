@@ -1,41 +1,52 @@
-🎵 Music Control
-Select music with radio buttons
+# 🏠 SmartHome - Python Tkinter GUI Project
 
-Music starts automatically and loops
+## 📌 Description
+**SmartHome** is a desktop application built with Python and Tkinter that simulates a smart home control system. It allows users to interact with home components such as doors, lights, music, and temperature monitoring through an interactive GUI.
 
-Each song changes the theme of the interface
+---
 
-🚪 Garage & Door Control
-Open/close garage door via serial commands:
+## 🧰 Technologies Used
 
-s1.write(b"e") → Open
+- Python 3.x
+- Tkinter – for GUI
+- Pillow (PIL) – image processing
+- Pygame – music playback
+- PySerial – serial communication with Arduino
 
-s1.write(b"g") → Close
+---
 
-Toggle house main door with similar commands
+## 🖼️ Features
 
-Buttons update their image based on door state
+### 🔐 Login System
+- Password-protected access
+- Plays a video if login is successful
+- Displays an alert image if multiple failed login attempts
+- Sends email notification on failed login attempts
 
-🌡️ Temperature Monitoring
-Reads temperature from Arduino every second
+### 🕹️ Control Panel
+- Control buttons for: bedroom, living room, garage, and doors
+- Buttons are image-based and change appearance depending on the selected music/theme
 
-Displays live temperature in the GUI
+### 🖌️ Dynamic UI Switching
+- Each music selection comes with its own theme:
+  - Background image
+  - Button images (bedroom, garage, lights, etc.)
 
-🔁 Return to Main Menu
-A back button to return from garage screen to main control panel (Host.py)
+```python
+background_images_control_panel = {
+    "Song 1": "background1.jpg",
+    "Song 2": "background2.jpg"
+}
 
-🔌 Arduino Integration
-Communicates via Serial (USB)
-
-Example commands sent from GUI:
-
-b"e": Open garage
-
-b"g": Close garage
-
-b"m": Open main door
-
-b"d": Close main door
-
-b"n": Request temperature data
-
+button_images_control_panel = {
+    "Song 1": {
+        "bedroom": "bedroom.jpg",
+        "garage": "garage.jpg",
+        ...
+    },
+    "Song 2": {
+        "bedroom": "new_bedroom.jpg",
+        "garage": "new_garage.jpg",
+        ...
+    }
+}
